@@ -1,0 +1,83 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity commanding_unit is
+    port (
+        SYSTEM_CLK: in std_logic;
+        RESET: in std_logic;
+        CONTROL: in std_logic_vector(1 downto 0);
+        FILTER: in std_logic_vector(1 downto 0);
+        CATHODE: out std_logic_vector(6 downto 0);
+        ANODE: out std_logic_vector(3 downto 0);
+        SQW:in std_logic
+    );
+end commanding_unit;
+
+architecture arch of commanding_unit is
+
+    signal CLK_1HZ : std_logic;
+    signal CLK_SQUARE_WAVE : std_logic;
+    signal CLK : std_logic;
+    signal DIN : std_logic_vector(7 downto 0);
+    signal AVG : std_logic_vector(7 downto 0);
+
+    component frequency_divider is
+         port (
+             clk     : in std_logic;
+             R       : in std_logic;
+             clk_out : out std_logic
+             );
+    end component;
+
+    component data_generator_block is
+        port (
+            CLK: in std_logic;
+            RESET: in std_logic;
+            CONTROL: in std_logic_vector(1 downto 0);
+            DATA: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component average_computer_block is
+        port (
+            DIN: in std_logic_vector(7 downto 0);
+            CLK: in std_logic;
+            FILTER: in std_logic_vector(1 downto 0);
+            RESET: in std_logic;
+            AVERAGE: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component lcd_display is
+        port (
+            CLK, RESET: in std_logic;
+            DIN, AVG: in std_logic_vector(7 downto 0);
+            ANODE: out std_logic_vector(3 downto 0);
+            CATHODE: out std_logic_vector(6 downto 0)
+        );
+    end component;
+
+    component squarewave_generator is
+       port (
+        clk: in std_logic;
+        R: in std_logic;
+        clk_out: out std_logic
+    );
+    end component;
+
+begin
+    L1: frequency_divider port map(SYSTEM_CLK, RESET, CLK_1HZ);
+    L2: data_generator_block port map(CLK, RESET, CONTROL, DIN);
+    L3: average_computer_block port map(DIN, CLK, FILTER, RESET, AVG);
+    L4: squarewave_generator port map(CLK_1HZ, RESET, CLK_SQUARE_WAVE);
+    L5: lcd_display port map(SYSTEM_CLK, RESET, DIN, AVG, ANODE, CATHODE);
+
+    process(SQW)
+    begin
+        if SQW = '0' then
+            CLK <= CLK_1HZ;
+        else
+            CLK <= CLK_SQUARE_WAVE;
+        end if;
+    end process;
+end arch;

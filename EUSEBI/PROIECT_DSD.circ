@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Poke Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool"/>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="downloadBoard" val="NEXYS4_DDR_NOU"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <boardmap boardname="NEXYS4_DDR_NOU">
+      <mc key="/Button_1" map="298,144"/>
+      <mc key="/Input_1" map="94,325"/>
+      <mc key="/Input_bus_1" pmap="601_325_0,572_325_0,536_325_0"/>
+      <mc key="/Input_bus_2" pmap="197_325_0,163_325_0,128_325_0"/>
+      <mc key="/Output_bus_1" pmap="208_200_0,248_200_0,289_200_0,160_200_0"/>
+      <mc key="/Output_bus_2" pmap="164_237_0,153_223_0,153_243_0,164_257_0,184_243_0,184_224_0,162_219_0"/>
+    </boardmap>
+    <comp lib="0" loc="(140,180)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(1410,80)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1430,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(160,120)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1710,160)" name="Splitter">
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="7"/>
+    </comp>
+    <comp lib="0" loc="(1770,440)" name="Splitter">
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="7"/>
+    </comp>
+    <comp lib="0" loc="(1970,170)" name="Splitter">
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="7"/>
+    </comp>
+    <comp lib="0" loc="(2030,450)" name="Splitter">
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="7"/>
+    </comp>
+    <comp lib="0" loc="(2250,170)" name="Splitter">
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="7"/>
+    </comp>
+    <comp lib="0" loc="(2310,450)" name="Splitter">
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="7"/>
+    </comp>
+    <comp lib="0" loc="(500,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(630,50)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(960,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="5" loc="(150,150)" name="Button"/>
+    <comp lib="5" loc="(1840,150)" name="7-Segment Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(1900,430)" name="7-Segment Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(2100,160)" name="7-Segment Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(2160,440)" name="7-Segment Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(2380,160)" name="7-Segment Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(2440,440)" name="7-Segment Display"/>
+    <comp loc="(1340,80)" name="lcd_display">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(1380,270)" name="decodificator_zecimal">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1380,430)" name="decodificator_zecimal">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(1670,200)" name="hex_7seg">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1690,260)" name="hex_7seg">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1700,340)" name="hex_7seg">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1730,480)" name="hex_7seg">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1750,540)" name="hex_7seg">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1760,620)" name="hex_7seg">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(470,120)" name="data_generator_block">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(870,200)" name="average_computer_block">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(1020,220)" to="(1020,430)"/>
+    <wire from="(1020,220)" to="(1120,220)"/>
+    <wire from="(1020,430)" to="(1160,430)"/>
+    <wire from="(1090,120)" to="(1090,270)"/>
+    <wire from="(1090,120)" to="(1120,120)"/>
+    <wire from="(1090,270)" to="(1160,270)"/>
+    <wire from="(1120,140)" to="(1120,220)"/>
+    <wire from="(1340,100)" to="(1340,110)"/>
+    <wire from="(1340,110)" to="(1430,110)"/>
+    <wire from="(1340,80)" to="(1410,80)"/>
+    <wire from="(1380,270)" to="(1420,270)"/>
+    <wire from="(1380,290)" to="(1440,290)"/>
+    <wire from="(1380,310)" to="(1440,310)"/>
+    <wire from="(1380,430)" to="(1480,430)"/>
+    <wire from="(1380,450)" to="(1390,450)"/>
+    <wire from="(1380,470)" to="(1380,480)"/>
+    <wire from="(1380,480)" to="(1510,480)"/>
+    <wire from="(1390,450)" to="(1390,540)"/>
+    <wire from="(1390,540)" to="(1530,540)"/>
+    <wire from="(140,180)" to="(190,180)"/>
+    <wire from="(1420,270)" to="(1420,330)"/>
+    <wire from="(1420,330)" to="(1470,330)"/>
+    <wire from="(1440,290)" to="(1440,300)"/>
+    <wire from="(1440,300)" to="(1460,300)"/>
+    <wire from="(1440,310)" to="(1440,320)"/>
+    <wire from="(1440,320)" to="(1450,320)"/>
+    <wire from="(1450,200)" to="(1450,320)"/>
+    <wire from="(1460,260)" to="(1460,300)"/>
+    <wire from="(1460,260)" to="(1470,260)"/>
+    <wire from="(1470,330)" to="(1470,340)"/>
+    <wire from="(1470,340)" to="(1480,340)"/>
+    <wire from="(1480,430)" to="(1480,620)"/>
+    <wire from="(1480,620)" to="(1540,620)"/>
+    <wire from="(150,150)" to="(210,150)"/>
+    <wire from="(160,120)" to="(250,120)"/>
+    <wire from="(1670,200)" to="(1710,200)"/>
+    <wire from="(1690,250)" to="(1690,260)"/>
+    <wire from="(1690,250)" to="(1930,250)"/>
+    <wire from="(1700,340)" to="(2190,340)"/>
+    <wire from="(1710,160)" to="(1710,200)"/>
+    <wire from="(1730,100)" to="(1850,100)"/>
+    <wire from="(1730,110)" to="(1760,110)"/>
+    <wire from="(1730,120)" to="(1750,120)"/>
+    <wire from="(1730,130)" to="(1740,130)"/>
+    <wire from="(1730,140)" to="(1800,140)"/>
+    <wire from="(1730,150)" to="(1810,150)"/>
+    <wire from="(1730,480)" to="(1770,480)"/>
+    <wire from="(1730,90)" to="(1840,90)"/>
+    <wire from="(1740,130)" to="(1740,240)"/>
+    <wire from="(1740,240)" to="(1860,240)"/>
+    <wire from="(1750,120)" to="(1750,230)"/>
+    <wire from="(1750,230)" to="(1850,230)"/>
+    <wire from="(1750,530)" to="(1750,540)"/>
+    <wire from="(1750,530)" to="(1990,530)"/>
+    <wire from="(1760,110)" to="(1760,220)"/>
+    <wire from="(1760,220)" to="(1840,220)"/>
+    <wire from="(1760,620)" to="(2250,620)"/>
+    <wire from="(1770,440)" to="(1770,480)"/>
+    <wire from="(1790,370)" to="(1900,370)"/>
+    <wire from="(1790,380)" to="(1910,380)"/>
+    <wire from="(1790,390)" to="(1820,390)"/>
+    <wire from="(1790,400)" to="(1810,400)"/>
+    <wire from="(1790,410)" to="(1800,410)"/>
+    <wire from="(1790,420)" to="(1860,420)"/>
+    <wire from="(1790,430)" to="(1870,430)"/>
+    <wire from="(1800,130)" to="(1800,140)"/>
+    <wire from="(1800,130)" to="(1870,130)"/>
+    <wire from="(1800,410)" to="(1800,520)"/>
+    <wire from="(1800,520)" to="(1920,520)"/>
+    <wire from="(1810,140)" to="(1810,150)"/>
+    <wire from="(1810,140)" to="(1860,140)"/>
+    <wire from="(1810,400)" to="(1810,510)"/>
+    <wire from="(1810,510)" to="(1910,510)"/>
+    <wire from="(1820,390)" to="(1820,500)"/>
+    <wire from="(1820,500)" to="(1900,500)"/>
+    <wire from="(1840,210)" to="(1840,220)"/>
+    <wire from="(1840,90)" to="(1840,150)"/>
+    <wire from="(1850,100)" to="(1850,150)"/>
+    <wire from="(1850,210)" to="(1850,230)"/>
+    <wire from="(1860,140)" to="(1860,150)"/>
+    <wire from="(1860,210)" to="(1860,240)"/>
+    <wire from="(1860,410)" to="(1860,420)"/>
+    <wire from="(1860,410)" to="(1930,410)"/>
+    <wire from="(1870,130)" to="(1870,150)"/>
+    <wire from="(1870,420)" to="(1870,430)"/>
+    <wire from="(1870,420)" to="(1920,420)"/>
+    <wire from="(190,180)" to="(190,260)"/>
+    <wire from="(190,180)" to="(250,180)"/>
+    <wire from="(190,260)" to="(630,260)"/>
+    <wire from="(1900,370)" to="(1900,430)"/>
+    <wire from="(1900,490)" to="(1900,500)"/>
+    <wire from="(1910,380)" to="(1910,430)"/>
+    <wire from="(1910,490)" to="(1910,510)"/>
+    <wire from="(1920,420)" to="(1920,430)"/>
+    <wire from="(1920,490)" to="(1920,520)"/>
+    <wire from="(1930,210)" to="(1930,250)"/>
+    <wire from="(1930,210)" to="(1970,210)"/>
+    <wire from="(1930,410)" to="(1930,430)"/>
+    <wire from="(1970,170)" to="(1970,210)"/>
+    <wire from="(1990,100)" to="(2100,100)"/>
+    <wire from="(1990,110)" to="(2110,110)"/>
+    <wire from="(1990,120)" to="(2020,120)"/>
+    <wire from="(1990,130)" to="(2010,130)"/>
+    <wire from="(1990,140)" to="(2000,140)"/>
+    <wire from="(1990,150)" to="(2060,150)"/>
+    <wire from="(1990,160)" to="(2070,160)"/>
+    <wire from="(1990,490)" to="(1990,530)"/>
+    <wire from="(1990,490)" to="(2030,490)"/>
+    <wire from="(2000,140)" to="(2000,250)"/>
+    <wire from="(2000,250)" to="(2120,250)"/>
+    <wire from="(2010,130)" to="(2010,240)"/>
+    <wire from="(2010,240)" to="(2110,240)"/>
+    <wire from="(2020,120)" to="(2020,230)"/>
+    <wire from="(2020,230)" to="(2100,230)"/>
+    <wire from="(2030,450)" to="(2030,490)"/>
+    <wire from="(2050,380)" to="(2160,380)"/>
+    <wire from="(2050,390)" to="(2170,390)"/>
+    <wire from="(2050,400)" to="(2080,400)"/>
+    <wire from="(2050,410)" to="(2070,410)"/>
+    <wire from="(2050,420)" to="(2060,420)"/>
+    <wire from="(2050,430)" to="(2120,430)"/>
+    <wire from="(2050,440)" to="(2130,440)"/>
+    <wire from="(2060,140)" to="(2060,150)"/>
+    <wire from="(2060,140)" to="(2130,140)"/>
+    <wire from="(2060,420)" to="(2060,530)"/>
+    <wire from="(2060,530)" to="(2180,530)"/>
+    <wire from="(2070,150)" to="(2070,160)"/>
+    <wire from="(2070,150)" to="(2120,150)"/>
+    <wire from="(2070,410)" to="(2070,520)"/>
+    <wire from="(2070,520)" to="(2170,520)"/>
+    <wire from="(2080,400)" to="(2080,510)"/>
+    <wire from="(2080,510)" to="(2160,510)"/>
+    <wire from="(210,150)" to="(210,220)"/>
+    <wire from="(210,150)" to="(220,150)"/>
+    <wire from="(210,220)" to="(650,220)"/>
+    <wire from="(2100,100)" to="(2100,160)"/>
+    <wire from="(2100,220)" to="(2100,230)"/>
+    <wire from="(2110,110)" to="(2110,160)"/>
+    <wire from="(2110,220)" to="(2110,240)"/>
+    <wire from="(2120,150)" to="(2120,160)"/>
+    <wire from="(2120,220)" to="(2120,250)"/>
+    <wire from="(2120,420)" to="(2120,430)"/>
+    <wire from="(2120,420)" to="(2190,420)"/>
+    <wire from="(2130,140)" to="(2130,160)"/>
+    <wire from="(2130,430)" to="(2130,440)"/>
+    <wire from="(2130,430)" to="(2180,430)"/>
+    <wire from="(2160,380)" to="(2160,440)"/>
+    <wire from="(2160,500)" to="(2160,510)"/>
+    <wire from="(2170,390)" to="(2170,440)"/>
+    <wire from="(2170,500)" to="(2170,520)"/>
+    <wire from="(2180,430)" to="(2180,440)"/>
+    <wire from="(2180,500)" to="(2180,530)"/>
+    <wire from="(2190,260)" to="(2190,340)"/>
+    <wire from="(2190,260)" to="(2210,260)"/>
+    <wire from="(2190,420)" to="(2190,440)"/>
+    <wire from="(220,150)" to="(240,150)"/>
+    <wire from="(220,80)" to="(1120,80)"/>
+    <wire from="(220,80)" to="(220,150)"/>
+    <wire from="(2210,210)" to="(2210,260)"/>
+    <wire from="(2210,210)" to="(2250,210)"/>
+    <wire from="(2250,170)" to="(2250,210)"/>
+    <wire from="(2250,540)" to="(2250,620)"/>
+    <wire from="(2250,540)" to="(2270,540)"/>
+    <wire from="(2270,100)" to="(2380,100)"/>
+    <wire from="(2270,110)" to="(2390,110)"/>
+    <wire from="(2270,120)" to="(2300,120)"/>
+    <wire from="(2270,130)" to="(2290,130)"/>
+    <wire from="(2270,140)" to="(2280,140)"/>
+    <wire from="(2270,150)" to="(2340,150)"/>
+    <wire from="(2270,160)" to="(2350,160)"/>
+    <wire from="(2270,490)" to="(2270,540)"/>
+    <wire from="(2270,490)" to="(2310,490)"/>
+    <wire from="(2280,140)" to="(2280,250)"/>
+    <wire from="(2280,250)" to="(2400,250)"/>
+    <wire from="(2290,130)" to="(2290,240)"/>
+    <wire from="(2290,240)" to="(2390,240)"/>
+    <wire from="(2300,120)" to="(2300,230)"/>
+    <wire from="(2300,230)" to="(2380,230)"/>
+    <wire from="(2310,450)" to="(2310,490)"/>
+    <wire from="(2330,380)" to="(2440,380)"/>
+    <wire from="(2330,390)" to="(2450,390)"/>
+    <wire from="(2330,400)" to="(2360,400)"/>
+    <wire from="(2330,410)" to="(2350,410)"/>
+    <wire from="(2330,420)" to="(2340,420)"/>
+    <wire from="(2330,430)" to="(2400,430)"/>
+    <wire from="(2330,440)" to="(2410,440)"/>
+    <wire from="(2340,140)" to="(2340,150)"/>
+    <wire from="(2340,140)" to="(2410,140)"/>
+    <wire from="(2340,420)" to="(2340,530)"/>
+    <wire from="(2340,530)" to="(2460,530)"/>
+    <wire from="(2350,150)" to="(2350,160)"/>
+    <wire from="(2350,150)" to="(2400,150)"/>
+    <wire from="(2350,410)" to="(2350,520)"/>
+    <wire from="(2350,520)" to="(2450,520)"/>
+    <wire from="(2360,400)" to="(2360,510)"/>
+    <wire from="(2360,510)" to="(2440,510)"/>
+    <wire from="(2380,100)" to="(2380,160)"/>
+    <wire from="(2380,220)" to="(2380,230)"/>
+    <wire from="(2390,110)" to="(2390,160)"/>
+    <wire from="(2390,220)" to="(2390,240)"/>
+    <wire from="(240,140)" to="(240,150)"/>
+    <wire from="(240,140)" to="(250,140)"/>
+    <wire from="(2400,150)" to="(2400,160)"/>
+    <wire from="(2400,220)" to="(2400,250)"/>
+    <wire from="(2400,420)" to="(2400,430)"/>
+    <wire from="(2400,420)" to="(2470,420)"/>
+    <wire from="(2410,140)" to="(2410,160)"/>
+    <wire from="(2410,430)" to="(2410,440)"/>
+    <wire from="(2410,430)" to="(2460,430)"/>
+    <wire from="(2440,380)" to="(2440,440)"/>
+    <wire from="(2440,500)" to="(2440,510)"/>
+    <wire from="(2450,390)" to="(2450,440)"/>
+    <wire from="(2450,500)" to="(2450,520)"/>
+    <wire from="(2460,430)" to="(2460,440)"/>
+    <wire from="(2460,500)" to="(2460,530)"/>
+    <wire from="(2470,420)" to="(2470,440)"/>
+    <wire from="(250,160)" to="(250,180)"/>
+    <wire from="(470,120)" to="(540,120)"/>
+    <wire from="(500,240)" to="(650,240)"/>
+    <wire from="(540,120)" to="(590,120)"/>
+    <wire from="(540,50)" to="(540,120)"/>
+    <wire from="(540,50)" to="(630,50)"/>
+    <wire from="(590,120)" to="(1090,120)"/>
+    <wire from="(590,120)" to="(590,190)"/>
+    <wire from="(590,190)" to="(650,190)"/>
+    <wire from="(630,100)" to="(1120,100)"/>
+    <wire from="(630,100)" to="(630,260)"/>
+    <wire from="(630,260)" to="(650,260)"/>
+    <wire from="(650,190)" to="(650,200)"/>
+    <wire from="(870,200)" to="(910,200)"/>
+    <wire from="(910,160)" to="(910,200)"/>
+    <wire from="(910,160)" to="(920,160)"/>
+    <wire from="(910,200)" to="(960,200)"/>
+    <wire from="(920,150)" to="(920,160)"/>
+    <wire from="(920,150)" to="(960,150)"/>
+    <wire from="(960,200)" to="(960,220)"/>
+    <wire from="(960,220)" to="(1020,220)"/>
+  </circuit>
+  <vhdl name="xor_gate">library ieee;
+use ieee.std_logic_1164.all;
+
+entity xor_gate is
+    port (
+        x, y : in std_logic;
+        z : out std_logic
+    );
+end xor_gate;
+
+architecture arch_xor of xor_gate is
+begin
+    z &lt;= x xor y;
+end arch_xor;</vhdl>
+  <vhdl name="squarewave_generator">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity squarewave_generator is
+    port (
+        clk: in std_logic;
+        R: in std_logic;
+        clk_out: out std_logic
+    );
+end squarewave_generator;
+
+architecture arch_square of squarewave_generator is
+    signal count: unsigned(1 downto 0) := "00";
+begin
+    process(clk, R)
+    begin
+        if R = '1' then
+            count &lt;= "00";
+        elsif rising_edge(clk) then
+            count &lt;= count + 1;
+        end if;
+    end process;
+
+    clk_out &lt;= count(1);
+end arch_square;
+</vhdl>
+  <vhdl name="lfsr_4bit">library ieee;
+use ieee.std_logic_1164.all;
+
+entity lfsr_4bit is
+    port (
+        CLK   : in  std_logic;
+        Q     : out std_logic_vector(3 downto 0);
+        RESET : in  std_logic
+    );
+end lfsr_4bit;
+
+architecture arch_lfsr4 of lfsr_4bit is
+    
+
+    component xor_gate is
+        port (
+            x : in  std_logic;
+            y : in  std_logic;
+            z : out std_logic
+        );
+    end component;
+
+    signal iQ      : std_logic_vector(3 downto 0) := "1111";
+    signal rez_xor : std_logic;
+
+begin
+    l0: xor_gate port map (iQ(2), iQ(3), rez_xor);
+    
+    process (CLK, RESET)
+    begin
+        if RESET = '1' then
+            iQ &lt;= "1111";
+        elsif rising_edge(CLK) then
+            iQ(0) &lt;= rez_xor;
+            iQ(1) &lt;= iQ(0);
+            iQ(2) &lt;= iQ(1);
+            iQ(3) &lt;= iQ(2);
+        end if;
+    end process;
+
+    Q &lt;= iQ;
+
+end arch_lfsr4;
+
+
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity xor_gate is
+
+	port (x, y: in STD_LOGIC;
+	z: out STD_LOGIC);
+	
+end xor_gate;
+
+architecture arch of xor_gate is
+begin
+
+	process(x, y)
+	
+	begin
+	
+		z&lt;= x xor y;
+	end process;
+	
+end arch;
+
+</vhdl>
+  <vhdl name="lfsr_8bit">library ieee;
+use ieee.std_logic_1164.all;
+
+entity lfsr_8bit is
+  port(
+    CLK   : in  std_logic;
+    RESET : in  std_logic;
+    Q     : out std_logic_vector(7 downto 0)
+  );
+end entity lfsr_8bit;
+
+architecture arch_lfsr8 of lfsr_8bit is
+  component xor_gate is
+    port (
+      x : in  std_logic;
+      y : in  std_logic;
+      z : out std_logic
+    );
+  end component xor_gate;
+
+  signal iQ    : std_logic_vector(7 downto 0):="11111111";
+  signal xor1  : std_logic;
+  signal xor2  : std_logic;
+  signal xor3  : std_logic;
+
+begin
+l0: xor_gate port map (iQ(1), iQ(5), xor1);
+l1: xor_gate port map (iQ(6), iQ(7), xor2);
+l3: xor_gate port map (xor1, xor2, xor3);
+    
+    process (CLK, RESET)
+    begin
+        if RESET = '1' then
+            iQ &lt;= "11111111";
+        elsif rising_edge(CLK) then
+            iQ(0) &lt;=xor3;
+            iQ(1) &lt;= iQ(0);
+            iQ(2) &lt;= iQ(1);
+            iQ(3) &lt;= iQ(2);
+            iQ(4) &lt;= iQ(3);
+            iQ(5) &lt;= iQ(4);
+            iQ(6) &lt;= iQ(5);
+            iQ(7) &lt;= iQ(6);
+        end if;
+    end process;
+
+    Q &lt;= iQ;
+
+
+end architecture arch_lfsr8;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity xor_gate is
+
+	port (x, y: in STD_LOGIC;
+	z: out STD_LOGIC);
+	
+end xor_gate;
+
+architecture arch_xor of xor_gate is
+begin
+
+	process(x, y)
+	
+	begin
+	
+		z&lt;= x xor y;
+	end process;
+	
+end arch_xor;
+
+
+
+
+
+
+
+
+
+</vhdl>
+  <vhdl name="data_generator_block">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity data_generator_block is
+    port (
+        CONTROL : in  std_logic_vector(1 downto 0);
+        CLK     : in  std_logic;
+        RESET   : in  std_logic;
+        Data    : out std_logic_vector(7 downto 0)
+    );
+end entity data_generator_block;
+
+architecture arch_data of data_generator_block is
+
+    component lfsr_8bit is
+        port (
+            CLK   : in  std_logic;
+            RESET : in  std_logic;
+            Q     : out std_logic_vector(7 downto 0)
+        );
+    end component;
+    
+    component lfsr_4bit is
+        port (
+            CLK   : in  std_logic;
+            Q     : out std_logic_vector(3 downto 0);
+            RESET : in  std_logic
+        );
+    end component;
+   
+    signal iQ4  : std_logic_vector(3 downto 0);
+    signal iQ8  : std_logic_vector(7 downto 0);
+    signal iData: std_logic_vector(7 downto 0) := (others =&gt; '0');
+    type rom_array is array (5 downto 0) of std_logic_vector(7 downto 0);
+    constant student1data : rom_array := (
+        "00001001",
+        "00000111",
+        "00000000",
+        "00000010",
+        "00001000",
+        "00000001");
+    constant student2data : rom_array := (
+        "00001000",
+        "00000011",
+        "00000111",
+        "00000110",
+        "00000000",
+        "00000101");
+    
+begin
+
+    C0: lfsr_4bit port map (CLK, iQ4, RESET);
+    C1: lfsr_8bit port map (CLK, RESET, iQ8);
+    
+    
+    process (RESET, iQ4, iQ8, CONTROL,CLK)
+    variable var:integer:=0;
+    variable var2:integer:=0;
+    begin
+        if RESET = '1' then 
+            iData &lt;= (others =&gt; '0');
+            var:=0;
+             var2:=0;
+            
+        else
+            case CONTROL is
+               when "10" =&gt;
+                    var2:=0;
+                   if rising_edge(CLK) then
+                       if var&lt; 6 then 
+                       iData &lt;= student1data(var);
+                       var:=var+1;
+                       else 
+                         var:=0;
+                         iData &lt;= student1data(var);
+                         var:=var+1;
+                         end if;
+                         end if;
+                when "11" =&gt;
+                    var:=0;
+                    if rising_edge(CLK) then
+                       if var2&lt; 6 then 
+                       	iData &lt;= student2data(var2);
+                       	var2:=var2+1;
+                       else 
+                         var2:=0;
+                         iData &lt;= student2data(var2);
+                         var2:=var2+1;
+                       end if;
+				end if;
+                when "01" =&gt;
+                	var:=0;
+                	var2:=0;
+                    iData &lt;= "0000" &amp; iQ4;
+                when others =&gt;
+                	var:=0;
+                	var2:=0;
+                    iData &lt;= iQ8;
+            end case;
+        end if;
+    end process;
+
+    Data &lt;= iData;
+    
+end architecture arch_data;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity lfsr_4bit is
+    port (
+        CLK   : in  std_logic;
+        Q     : out std_logic_vector(3 downto 0);
+        RESET : in  std_logic
+    );
+end lfsr_4bit;
+
+architecture arch_lfsr4 of lfsr_4bit is
+    
+
+    component xor_gate is
+        port (
+            x : in  std_logic;
+            y : in  std_logic;
+            z : out std_logic
+        );
+    end component;
+
+    signal iQ      : std_logic_vector(3 downto 0) := "1111";
+    signal rez_xor : std_logic;
+
+begin
+    l0: xor_gate port map (iQ(2), iQ(3), rez_xor);
+    
+    process (CLK, RESET)
+    begin
+        if RESET = '1' then
+            iQ &lt;= "1111";
+        elsif rising_edge(CLK) then
+            iQ(0) &lt;= rez_xor;
+            iQ(1) &lt;= iQ(0);
+            iQ(2) &lt;= iQ(1);
+            iQ(3) &lt;= iQ(2);
+        end if;
+    end process;
+
+    Q &lt;= iQ;
+
+end arch_lfsr4;
+
+
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity xor_gate is
+
+	port (x, y: in STD_LOGIC;
+	z: out STD_LOGIC);
+	
+end xor_gate;
+
+architecture arch of xor_gate is
+begin
+
+	process(x, y)
+	
+	begin
+	
+		z&lt;= x xor y;
+	end process;
+	
+end arch;
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity lfsr_8bit is
+  port(
+    CLK   : in  std_logic;
+    RESET : in  std_logic;
+    Q     : out std_logic_vector(7 downto 0)
+  );
+end entity lfsr_8bit;
+
+architecture arch_lfsr8 of lfsr_8bit is
+  component xor_gate is
+    port (
+      x : in  std_logic;
+      y : in  std_logic;
+      z : out std_logic
+    );
+  end component xor_gate;
+
+  signal iQ    : std_logic_vector(7 downto 0):="11111111";
+  signal xor1  : std_logic;
+  signal xor2  : std_logic;
+  signal xor3  : std_logic;
+
+begin
+l0: xor_gate port map (iQ(1), iQ(5), xor1);
+l1: xor_gate port map (iQ(6), iQ(7), xor2);
+l3: xor_gate port map (xor1, xor2, xor3);
+    
+    process (CLK, RESET)
+    begin
+        if RESET = '1' then
+            iQ &lt;= "11111111";
+        elsif rising_edge(CLK) then
+            iQ(0) &lt;=xor3;
+            iQ(1) &lt;= iQ(0);
+            iQ(2) &lt;= iQ(1);
+            iQ(3) &lt;= iQ(2);
+            iQ(4) &lt;= iQ(3);
+            iQ(5) &lt;= iQ(4);
+            iQ(6) &lt;= iQ(5);
+            iQ(7) &lt;= iQ(6);
+        end if;
+    end process;
+
+    Q &lt;= iQ;
+
+
+end architecture arch_lfsr8;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity xor_gate is
+
+	port (x, y: in STD_LOGIC;
+	z: out STD_LOGIC);
+	
+end xor_gate;
+
+architecture arch_xor of xor_gate is
+begin
+
+	process(x, y)
+	
+	begin
+	
+		z&lt;= x xor y;
+	end process;
+	
+end arch_xor;
+</vhdl>
+  <vhdl name="frequency_divider">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity frequency_divider is
+    port (
+        clk     : in std_logic;
+        R       : in std_logic;
+        clk_out : out std_logic
+    );
+end frequency_divider;
+
+architecture arch_freq of frequency_divider is
+    signal count : unsigned(25 downto 0) := (others =&gt; '0');
+begin
+    process (clk, R)
+    begin
+        if R = '1' then
+            count &lt;= (others =&gt; '0');
+        elsif rising_edge(clk) then
+            count &lt;= count + 1;
+        end if;
+    end process;
+
+    clk_out &lt;= count(25);
+end arch_freq;
+</vhdl>
+  <vhdl name="average_2numbers">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity average_2numbers is
+    port (
+        nr1     : in  std_logic_vector(7 downto 0);
+        nr2     : in  std_logic_vector(7 downto 0);
+        average : out std_logic_vector(7 downto 0)
+    );
+end entity average_2numbers;
+
+architecture arch_avg2 of average_2numbers is
+    signal SUM : std_logic_vector(8 downto 0) := (others =&gt; '0');
+begin 
+    SUM &lt;= ('0' &amp; nr1) + ('0' &amp; nr2);
+    average &lt;= SUM(8 downto 1);
+end architecture arch_avg2;
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</vhdl>
+  <vhdl name="register_8bit">library ieee;
+use ieee.std_logic_1164.all;
+
+entity register_8bit is
+    port (
+        din : in std_logic_vector(7 downto 0);
+        r   : in std_logic;
+        clk : in std_logic;
+        q   : out std_logic_vector(7 downto 0)
+    );
+end entity register_8bit;
+
+architecture arch_registru of register_8bit is
+    signal idin : std_logic_vector(7 downto 0) := (others =&gt; '0');
+begin
+    process (r, clk)
+    begin
+        if r = '1' then
+            idin &lt;= (others =&gt; '0');
+        elsif rising_edge(clk) then
+            idin &lt;= din;
+        end if;
+    end process;
+
+    q &lt;= idin;
+end architecture arch_registru;
+</vhdl>
+  <vhdl name="average_4numbers">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity average_4numbers is
+    port (
+        nr1 : in std_logic_vector(7 downto 0);
+        nr2 : in std_logic_vector(7 downto 0);
+        nr3 : in std_logic_vector(7 downto 0);
+        nr4 : in std_logic_vector(7 downto 0);
+        avg : out std_logic_vector(7 downto 0)
+    );
+end average_4numbers;
+
+architecture arch_avg4 of average_4numbers is  
+    signal first2_sum : std_logic_vector(8 downto 0);
+    signal last2_sum  : std_logic_vector(8 downto 0);
+    signal sum        : std_logic_vector(9 downto 0);
+begin
+    first2_sum &lt;= ('0' &amp; nr1) + ('0' &amp; nr2);
+    last2_sum  &lt;= ('0' &amp; nr3) + ('0' &amp; nr4);
+    sum        &lt;= ('0' &amp; first2_sum) + ('0' &amp; last2_sum);
+    avg        &lt;= sum(9 downto 2);
+end arch_avg4;</vhdl>
+  <vhdl name="average_8numbers">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity average_8numbers is
+    port (
+        nr1 : in std_logic_vector(7 downto 0);
+        nr2 : in std_logic_vector(7 downto 0);
+        nr3 : in std_logic_vector(7 downto 0);
+        nr4 : in std_logic_vector(7 downto 0);
+        nr5 : in std_logic_vector(7 downto 0);
+        nr6 : in std_logic_vector(7 downto 0);
+        nr7 : in std_logic_vector(7 downto 0);
+        nr8 : in std_logic_vector(7 downto 0);
+        avg : out std_logic_vector(7 downto 0)
+    );
+end average_8numbers;
+
+architecture arch_avg8 of average_8numbers is
+
+    signal sum_first2 : std_logic_vector(8 downto 0);
+    signal sum_n3_n4  : std_logic_vector(8 downto 0);
+    signal sum_n5_n6  : std_logic_vector(8 downto 0);
+    signal sum_last2  : std_logic_vector(8 downto 0);
+    signal sum        : std_logic_vector(10 downto 0);
+
+begin
+
+    sum_first2 &lt;= ('0' &amp; nr1) + ('0' &amp; nr2);
+    sum_n3_n4  &lt;= ('0' &amp; nr3) + ('0' &amp; nr4);
+    sum_n5_n6  &lt;= ('0' &amp; nr5) + ('0' &amp; nr6);
+    sum_last2  &lt;= ('0' &amp; nr7) + ('0' &amp; nr8);
+    
+    sum &lt;= ('0' &amp; (('0' &amp; sum_first2) + ('0' &amp; sum_n3_n4))) + ('0' &amp; (('0' &amp; sum_n5_n6) + ('0' &amp; sum_last2)));
+    
+    avg &lt;= sum(10 downto 3);
+	
+end arch_avg8;
+</vhdl>
+  <vhdl name="average_16numbers">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+entity average_16numbers is
+    port (
+        nr1  : in std_logic_vector(7 downto 0);
+        nr2  : in std_logic_vector(7 downto 0);
+        nr3  : in std_logic_vector(7 downto 0);
+        nr4  : in std_logic_vector(7 downto 0);
+        nr5  : in std_logic_vector(7 downto 0);
+        nr6  : in std_logic_vector(7 downto 0);
+        nr7  : in std_logic_vector(7 downto 0);
+        nr8  : in std_logic_vector(7 downto 0);
+        nr9  : in std_logic_vector(7 downto 0);
+        nr10 : in std_logic_vector(7 downto 0);
+        nr11 : in std_logic_vector(7 downto 0);
+        nr12 : in std_logic_vector(7 downto 0);
+        nr13 : in std_logic_vector(7 downto 0);
+        nr14 : in std_logic_vector(7 downto 0);
+        nr15 : in std_logic_vector(7 downto 0);
+        nr16 : in std_logic_vector(7 downto 0);
+        avg  : out std_logic_vector(7 downto 0)
+    );
+end average_16numbers;
+
+architecture arch_avg16 of average_16numbers is
+
+    signal sum_nr1_nr2   : std_logic_vector(8 downto 0);
+    signal sum_nr3_nr4   : std_logic_vector(8 downto 0);
+    signal sum_nr5_nr6   : std_logic_vector(8 downto 0);
+    signal sum_nr7_nr8   : std_logic_vector(8 downto 0);
+    signal sum_nr9_nr10  : std_logic_vector(8 downto 0);
+    signal sum_nr11_nr12 : std_logic_vector(8 downto 0);
+    signal sum_nr13_nr14 : std_logic_vector(8 downto 0);
+    signal sum_nr15_nr16 : std_logic_vector(8 downto 0);
+    signal sum1_4        : std_logic_vector(9 downto 0);
+    signal sum5_8        : std_logic_vector(9 downto 0);
+    signal sum9_12       : std_logic_vector(9 downto 0);
+    signal sum13_16      : std_logic_vector(9 downto 0);
+    signal sum           : std_logic_vector(11 downto 0);
+
+begin
+
+    sum_nr1_nr2   &lt;= ('0' &amp; nr1)  + ('0' &amp; nr2);
+    sum_nr3_nr4   &lt;= ('0' &amp; nr3)  + ('0' &amp; nr4);
+    sum_nr5_nr6   &lt;= ('0' &amp; nr5)  + ('0' &amp; nr6);
+    sum_nr7_nr8   &lt;= ('0' &amp; nr7)  + ('0' &amp; nr8);
+    sum_nr9_nr10  &lt;= ('0' &amp; nr9)  + ('0' &amp; nr10);
+    sum_nr11_nr12 &lt;= ('0' &amp; nr11) + ('0' &amp; nr12);
+    sum_nr13_nr14 &lt;= ('0' &amp; nr13) + ('0' &amp; nr14);
+    sum_nr15_nr16 &lt;= ('0' &amp; nr15) + ('0' &amp; nr16);
+    
+    sum1_4  &lt;= ('0' &amp; sum_nr1_nr2)   + ('0' &amp; sum_nr3_nr4);
+    sum5_8  &lt;= ('0' &amp; sum_nr5_nr6)   + ('0' &amp; sum_nr7_nr8);
+    sum9_12 &lt;= ('0' &amp; sum_nr9_nr10)  + ('0' &amp; sum_nr11_nr12);
+    sum13_16 &lt;= ('0' &amp; sum_nr13_nr14) + ('0' &amp; sum_nr15_nr16);
+    
+    sum &lt;= ('0' &amp; (('0' &amp; sum1_4) + ('0' &amp; sum5_8))) + ('0' &amp; (('0' &amp; sum9_12) + ('0' &amp; sum13_16)));
+    
+    avg &lt;= sum(11 downto 4);
+	
+end arch_avg16;
+</vhdl>
+  <vhdl name="average_computer_block">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+USE ieee.std_logic_arith.all;
+use ieee.numeric_std.all;
+
+entity average_computer_block is
+    port (
+        DIN: in std_logic_vector(7 downto 0);
+        CLK: in std_logic;
+        FILTER: in std_logic_vector(1 downto 0);
+        RESET: in std_logic;
+        AVERAGE: out std_logic_vector(7 downto 0)
+    );
+end average_computer_block;
+
+architecture arch_avg of average_computer_block is
+
+    component average_16numbers is
+        port (
+             nr1  : in std_logic_vector(7 downto 0);
+	        nr2  : in std_logic_vector(7 downto 0);
+	        nr3  : in std_logic_vector(7 downto 0);
+	        nr4  : in std_logic_vector(7 downto 0);
+	        nr5  : in std_logic_vector(7 downto 0);
+	        nr6  : in std_logic_vector(7 downto 0);
+	        nr7  : in std_logic_vector(7 downto 0);
+	        nr8  : in std_logic_vector(7 downto 0);
+	        nr9  : in std_logic_vector(7 downto 0);
+	        nr10 : in std_logic_vector(7 downto 0);
+	        nr11 : in std_logic_vector(7 downto 0);
+	        nr12 : in std_logic_vector(7 downto 0);
+	        nr13 : in std_logic_vector(7 downto 0);
+	        nr14 : in std_logic_vector(7 downto 0);
+	        nr15 : in std_logic_vector(7 downto 0);
+	        nr16 : in std_logic_vector(7 downto 0);
+	        avg  : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component average_2numbers is
+        port (
+            nr1: in std_logic_vector(7 downto 0);
+            nr2: in std_logic_vector(7 downto 0);
+            average: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component average_4numbers is
+        port (
+            nr1: in std_logic_vector(7 downto 0);
+            nr2: in std_logic_vector(7 downto 0);
+            nr3: in std_logic_vector(7 downto 0);
+            nr4: in std_logic_vector(7 downto 0);
+            avg: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component register_8bit is
+        port (
+            din: in std_logic_vector(7 downto 0);
+            r: in std_logic;
+            clk: in std_logic;
+            q: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component average_8numbers is
+        port (
+	       nr1 : in std_logic_vector(7 downto 0);
+	       nr2 : in std_logic_vector(7 downto 0);
+	       nr3 : in std_logic_vector(7 downto 0);
+	       nr4 : in std_logic_vector(7 downto 0);
+	       nr5 : in std_logic_vector(7 downto 0);
+	       nr6 : in std_logic_vector(7 downto 0);
+	       nr7 : in std_logic_vector(7 downto 0);
+	       nr8 : in std_logic_vector(7 downto 0);
+	       avg : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    type NUMBERS_TYPE is array (0 to 15) of std_logic_vector(7 downto 0);
+    signal AVERAGE_LAST2: std_logic_vector(7 downto 0);
+    signal AVERAGE_LAST4: std_logic_vector(7 downto 0);
+    signal AVERAGE_LAST8: std_logic_vector(7 downto 0);
+    signal AVERAGE_LAST16: std_logic_vector(7 downto 0);
+    signal NUM: NUMBERS_TYPE;
+
+begin
+
+    Registers: for I in 0 to 15 generate
+        L1: if I = 0 generate
+            L2: register_8bit port map (DIN, RESET, CLK, NUM(0));
+        end generate;
+
+        L3: if I &gt; 0 generate
+            L3: register_8bit port map (NUM(I - 1), RESET, CLK, NUM(I));
+        end generate;
+    end generate;
+
+    AVG_OF_LAST2: average_2numbers port map (NUM(0), NUM(1), AVERAGE_LAST2);
+    AVG_OF_LAST4: average_4numbers port map (NUM(0), NUM(1), NUM(2), NUM(3), AVERAGE_LAST4);
+    AVG_OF_LAST8: average_8numbers port map (NUM(0), NUM(1), NUM(2), NUM(3), NUM(4), NUM(5), NUM(6), NUM(7), AVERAGE_LAST8);
+    AVG_OF_LAST16: average_16numbers port map (NUM(0), NUM(1), NUM(2), NUM(3), NUM(4), NUM(5), NUM(6), NUM(7),NUM(8), NUM(9), NUM(10), NUM(11), NUM(12), NUM(13), NUM(14), NUM(15), AVERAGE_LAST16);
+
+    process (FILTER, AVERAGE_LAST2, AVERAGE_LAST4, AVERAGE_LAST8, AVERAGE_LAST16)
+        variable AVG: std_logic_vector(7 downto 0) := "00000000";
+    begin
+        case FILTER is
+            when "00" =&gt;
+                AVG := AVERAGE_LAST2;
+            when "01" =&gt;
+                AVG := AVERAGE_LAST4;
+            when "10" =&gt;
+                AVG := AVERAGE_LAST8;
+            when "11" =&gt;
+                AVG := AVERAGE_LAST16;
+            when others =&gt;
+                null;
+        end case;
+
+        AVERAGE &lt;= AVG;
+    end process;
+
+end arch_avg;
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity register_8bit is
+    port (
+        din : in std_logic_vector(7 downto 0);
+        r   : in std_logic;
+        clk : in std_logic;
+        q   : out std_logic_vector(7 downto 0)
+    );
+end entity register_8bit;
+
+architecture arch_registru of register_8bit is
+    signal idin : std_logic_vector(7 downto 0) := (others =&gt; '0');
+begin
+    process (r, clk)
+    begin
+        if r = '1' then
+            idin &lt;= (others =&gt; '0');
+        elsif rising_edge(clk) then
+            idin &lt;= din;
+        end if;
+    end process;
+
+    q &lt;= idin;
+end architecture arch_registru;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity average_2numbers is
+    port (
+        nr1     : in  std_logic_vector(7 downto 0);
+        nr2     : in  std_logic_vector(7 downto 0);
+        average : out std_logic_vector(7 downto 0)
+    );
+end entity average_2numbers;
+
+architecture arch_avg2 of average_2numbers is
+    signal SUM : std_logic_vector(8 downto 0) := (others =&gt; '0');
+begin 
+    SUM &lt;= ('0' &amp; nr1) + ('0' &amp; nr2);
+    average &lt;= SUM(8 downto 1);
+end architecture arch_avg2;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity average_4numbers is
+    port (
+        nr1 : in std_logic_vector(7 downto 0);
+        nr2 : in std_logic_vector(7 downto 0);
+        nr3 : in std_logic_vector(7 downto 0);
+        nr4 : in std_logic_vector(7 downto 0);
+        avg : out std_logic_vector(7 downto 0)
+    );
+end average_4numbers;
+
+architecture arch_avg4 of average_4numbers is  
+    signal first2_sum : std_logic_vector(8 downto 0);
+    signal last2_sum  : std_logic_vector(8 downto 0);
+    signal sum        : std_logic_vector(9 downto 0);
+begin
+    first2_sum &lt;= ('0' &amp; nr1) + ('0' &amp; nr2);
+    last2_sum  &lt;= ('0' &amp; nr3) + ('0' &amp; nr4);
+    sum        &lt;= ('0' &amp; first2_sum) + ('0' &amp; last2_sum);
+    avg        &lt;= sum(9 downto 2);
+end arch_avg4;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity average_8numbers is
+    port (
+        nr1 : in std_logic_vector(7 downto 0);
+        nr2 : in std_logic_vector(7 downto 0);
+        nr3 : in std_logic_vector(7 downto 0);
+        nr4 : in std_logic_vector(7 downto 0);
+        nr5 : in std_logic_vector(7 downto 0);
+        nr6 : in std_logic_vector(7 downto 0);
+        nr7 : in std_logic_vector(7 downto 0);
+        nr8 : in std_logic_vector(7 downto 0);
+        avg : out std_logic_vector(7 downto 0)
+    );
+end average_8numbers;
+
+architecture arch_avg8 of average_8numbers is
+
+    signal sum_first2 : std_logic_vector(8 downto 0);
+    signal sum_n3_n4  : std_logic_vector(8 downto 0);
+    signal sum_n5_n6  : std_logic_vector(8 downto 0);
+    signal sum_last2  : std_logic_vector(8 downto 0);
+    signal sum        : std_logic_vector(10 downto 0);
+
+begin
+
+    sum_first2 &lt;= ('0' &amp; nr1) + ('0' &amp; nr2);
+    sum_n3_n4  &lt;= ('0' &amp; nr3) + ('0' &amp; nr4);
+    sum_n5_n6  &lt;= ('0' &amp; nr5) + ('0' &amp; nr6);
+    sum_last2  &lt;= ('0' &amp; nr7) + ('0' &amp; nr8);
+    
+    sum &lt;= ('0' &amp; (('0' &amp; sum_first2) + ('0' &amp; sum_n3_n4))) + ('0' &amp; (('0' &amp; sum_n5_n6) + ('0' &amp; sum_last2)));
+    
+    avg &lt;= sum(10 downto 3);
+	
+end arch_avg8;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+entity average_16numbers is
+    port (
+        nr1  : in std_logic_vector(7 downto 0);
+        nr2  : in std_logic_vector(7 downto 0);
+        nr3  : in std_logic_vector(7 downto 0);
+        nr4  : in std_logic_vector(7 downto 0);
+        nr5  : in std_logic_vector(7 downto 0);
+        nr6  : in std_logic_vector(7 downto 0);
+        nr7  : in std_logic_vector(7 downto 0);
+        nr8  : in std_logic_vector(7 downto 0);
+        nr9  : in std_logic_vector(7 downto 0);
+        nr10 : in std_logic_vector(7 downto 0);
+        nr11 : in std_logic_vector(7 downto 0);
+        nr12 : in std_logic_vector(7 downto 0);
+        nr13 : in std_logic_vector(7 downto 0);
+        nr14 : in std_logic_vector(7 downto 0);
+        nr15 : in std_logic_vector(7 downto 0);
+        nr16 : in std_logic_vector(7 downto 0);
+        avg  : out std_logic_vector(7 downto 0)
+    );
+end average_16numbers;
+
+architecture arch_avg16 of average_16numbers is
+
+    signal sum_nr1_nr2   : std_logic_vector(8 downto 0);
+    signal sum_nr3_nr4   : std_logic_vector(8 downto 0);
+    signal sum_nr5_nr6   : std_logic_vector(8 downto 0);
+    signal sum_nr7_nr8   : std_logic_vector(8 downto 0);
+    signal sum_nr9_nr10  : std_logic_vector(8 downto 0);
+    signal sum_nr11_nr12 : std_logic_vector(8 downto 0);
+    signal sum_nr13_nr14 : std_logic_vector(8 downto 0);
+    signal sum_nr15_nr16 : std_logic_vector(8 downto 0);
+    signal sum1_4        : std_logic_vector(9 downto 0);
+    signal sum5_8        : std_logic_vector(9 downto 0);
+    signal sum9_12       : std_logic_vector(9 downto 0);
+    signal sum13_16      : std_logic_vector(9 downto 0);
+    signal sum           : std_logic_vector(11 downto 0);
+
+begin
+
+    sum_nr1_nr2   &lt;= ('0' &amp; nr1)  + ('0' &amp; nr2);
+    sum_nr3_nr4   &lt;= ('0' &amp; nr3)  + ('0' &amp; nr4);
+    sum_nr5_nr6   &lt;= ('0' &amp; nr5)  + ('0' &amp; nr6);
+    sum_nr7_nr8   &lt;= ('0' &amp; nr7)  + ('0' &amp; nr8);
+    sum_nr9_nr10  &lt;= ('0' &amp; nr9)  + ('0' &amp; nr10);
+    sum_nr11_nr12 &lt;= ('0' &amp; nr11) + ('0' &amp; nr12);
+    sum_nr13_nr14 &lt;= ('0' &amp; nr13) + ('0' &amp; nr14);
+    sum_nr15_nr16 &lt;= ('0' &amp; nr15) + ('0' &amp; nr16);
+    
+    sum1_4  &lt;= ('0' &amp; sum_nr1_nr2)   + ('0' &amp; sum_nr3_nr4);
+    sum5_8  &lt;= ('0' &amp; sum_nr5_nr6)   + ('0' &amp; sum_nr7_nr8);
+    sum9_12 &lt;= ('0' &amp; sum_nr9_nr10)  + ('0' &amp; sum_nr11_nr12);
+    sum13_16 &lt;= ('0' &amp; sum_nr13_nr14) + ('0' &amp; sum_nr15_nr16);
+    
+    sum &lt;= ('0' &amp; (('0' &amp; sum1_4) + ('0' &amp; sum5_8))) + ('0' &amp; (('0' &amp; sum9_12) + ('0' &amp; sum13_16)));
+    
+    avg &lt;= sum(11 downto 4);
+	
+end arch_avg16;
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+		
+	</vhdl>
+  <vhdl name="lcd_display">library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity lcd_display is
+    port (
+        CLK, RESET: in std_logic;
+        DIN, AVG: in std_logic_vector(7 downto 0);
+        ANODE: out std_logic_vector(3 downto 0);
+        CATHODE: out std_logic_vector(6 downto 0)
+    );
+end lcd_display;
+
+architecture arch of lcd_display is
+
+    signal LED_BCD : std_logic_vector(3 downto 0);
+    signal led_count : std_logic_vector(1 downto 0);
+
+begin
+    process(LED_BCD)
+    begin
+        case LED_BCD is
+            when "0000" =&gt; CATHODE &lt;= "0000001"; -- "0"
+            when "0001" =&gt; CATHODE &lt;= "1001111"; -- "1"
+            when "0010" =&gt; CATHODE &lt;= "0010010"; -- "2"
+            when "0011" =&gt; CATHODE &lt;= "0000110"; -- "3"
+            when "0100" =&gt; CATHODE &lt;= "1001100"; -- "4"
+            when "0101" =&gt; CATHODE &lt;= "0100100"; -- "5"
+            when "0110" =&gt; CATHODE &lt;= "0100000"; -- "6"
+            when "0111" =&gt; CATHODE &lt;= "0001111"; -- "7"
+            when "1000" =&gt; CATHODE &lt;= "0000000"; -- "8"
+            when "1001" =&gt; CATHODE &lt;= "0000100"; -- "9"
+            when "1010" =&gt; CATHODE &lt;= "0001000"; -- "A"
+            when "1011" =&gt; CATHODE &lt;= "1100000"; -- "B"
+            when "1100" =&gt; CATHODE &lt;= "0110001"; -- "C"
+            when "1101" =&gt; CATHODE &lt;= "1000010"; -- "D"
+            when "1110" =&gt; CATHODE &lt;= "0110000"; -- "E"
+            when "1111" =&gt; CATHODE &lt;= "0111000"; -- "F"
+            when others =&gt; CATHODE &lt;= "1111111"; -- "LCD off"
+        end case;
+    end process;
+
+    process (CLK, RESET)
+        variable divider : INTEGER := 0;
+    begin
+        if RESET = '1' then
+            led_count &lt;= "00";
+        else
+            if (rising_edge(CLK)) then
+                divider := divider + 1;
+                if (divider = 10000) then
+                    led_count &lt;= led_count + 1;
+                    divider := 0;
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (led_count, DIN, AVG)
+    begin
+        case led_count is
+            when "00" =&gt;
+                LED_BCD &lt;= DIN(7 downto 4);
+                ANODE &lt;= "0111";
+            when "01" =&gt;
+                LED_BCD &lt;= DIN(3 downto 0);
+                ANODE &lt;= "1011";
+            when "10" =&gt;
+                LED_BCD &lt;= AVG(7 downto 4);
+                ANODE &lt;= "1101";
+            when "11" =&gt;
+                LED_BCD &lt;= AVG(3 downto 0);
+                ANODE &lt;= "1110";
+            when others =&gt;
+                ANODE &lt;= "1111";
+        end case;
+    end process;
+
+end arch;
+</vhdl>
+  <vhdl name="commanding_unit">library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity commanding_unit is
+    port (
+        SYSTEM_CLK: in std_logic;
+        RESET: in std_logic;
+        CONTROL: in std_logic_vector(1 downto 0);
+        FILTER: in std_logic_vector(1 downto 0);
+        CATHODE: out std_logic_vector(6 downto 0);
+        ANODE: out std_logic_vector(3 downto 0);
+        SQW: in std_logic
+    );
+end commanding_unit;
+
+architecture arch of commanding_unit is
+
+    signal CLK_1HZ : std_logic;
+    signal CLK_SQUARE_WAVE : std_logic;
+    signal CLK : std_logic;
+    signal DIN : std_logic_vector(7 downto 0);
+    signal AVG : std_logic_vector(7 downto 0);
+
+    component frequency_divider is
+        port (
+            CLK_IN: in std_logic;
+            RESET: in std_logic;
+            CLK_OUT: out std_logic
+        );
+    end component;
+
+    component data_generator_block is
+        port (
+            CLK: in std_logic;
+            RESET: in std_logic;
+            CONTROL: in std_logic_vector(1 downto 0);
+            DATA: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component average_computer_block is
+        port (
+            DIN: in std_logic_vector(7 downto 0);
+            CLK: in std_logic;
+            FILTER: in std_logic_vector(1 downto 0);
+            RESET: in std_logic;
+            AVERAGE: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component lcd_display is
+        port (
+            CLK, RESET: in std_logic;
+            DIN, AVG: in std_logic_vector(7 downto 0);
+            ANODE: out std_logic_vector(3 downto 0);
+            CATHODE: out std_logic_vector(6 downto 0)
+        );
+    end component;
+
+    component squarewave_generator is
+        port (
+            CLK_IN: in std_logic;
+            RESET: in std_logic;
+            CLK_OUT: out std_logic
+        );
+    end component;
+
+begin
+    L1: frequency_divider port map(SYSTEM_CLK, RESET, CLK_1HZ);
+    L2: data_generator_block port map(CLK, RESET, CONTROL, DIN);
+    L3: average_computer_block port map(DIN, CLK, FILTER, RESET, AVG);
+    L4: squarewave_generator port map(CLK_1HZ, RESET, CLK_SQUARE_WAVE);
+    L5: lcd_display port map(SYSTEM_CLK, RESET, DIN, AVG, ANODE, CATHODE);
+
+    process(SQW)
+    begin
+        if SQW = '0' then
+            CLK &lt;= CLK_1HZ;
+        else
+            CLK &lt;= CLK_SQUARE_WAVE;
+        end if;
+    end process;
+end arch;
+</vhdl>
+  <vhdl name="decodificator_zecimal">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity decodificator_zecimal is
+  port (
+    nr_bin: in std_logic_vector(7 downto 0);
+    Unitate: out std_logic_vector(3 downto 0);
+    Zecimala: out std_logic_vector(3 downto 0);
+    Sute: out std_logic_vector(3 downto 0)
+  );
+end decodificator_zecimal;
+
+architecture comport of decodificator_zecimal is
+  signal num_int: integer := 0;
+  signal u, z, s,copy: integer := 0;
+begin
+  num_int &lt;= to_integer(unsigned(nr_bin));
+  copy&lt;=num_int;
+  s &lt;= num_int /100;
+  z &lt;= (num_int/10)mod 10;
+  u &lt;= num_int mod 10;
+  process(s)
+  begin
+    case s is
+      when 0 =&gt; Sute &lt;= "0000";
+      when 1 =&gt; Sute &lt;= "0001";
+      when 2 =&gt; Sute &lt;= "0010";
+      when 3 =&gt; Sute &lt;= "0011";
+      when 4 =&gt; Sute &lt;= "0100";
+      when 5 =&gt; Sute &lt;= "0101";
+      when 6 =&gt; Sute &lt;= "0110";
+      when 7 =&gt; Sute &lt;= "0111";
+      when 8 =&gt; Sute &lt;= "1000";
+      when 9 =&gt; Sute &lt;= "1001";
+      when others =&gt; Sute &lt;= "0000";
+    end case;
+  end process;
+  
+
+  process(u)
+  begin
+    case u is
+      when 0 =&gt; Unitate &lt;= "0000";
+      when 1 =&gt; Unitate &lt;= "0001";
+      when 2 =&gt; Unitate &lt;= "0010";
+      when 3 =&gt; Unitate &lt;= "0011";
+      when 4 =&gt; Unitate &lt;= "0100";
+      when 5 =&gt; Unitate &lt;= "0101";
+      when 6 =&gt; Unitate &lt;= "0110";
+      when 7 =&gt; Unitate &lt;= "0111";
+      when 8 =&gt; Unitate &lt;= "1000";
+      when 9 =&gt; Unitate &lt;= "1001";
+      when others =&gt; Unitate &lt;= "0000";
+    end case;
+  end process;
+
+  process(z)
+  begin
+    case z is
+      when 0 =&gt; Zecimala &lt;= "0000";
+      when 1 =&gt; Zecimala &lt;= "0001";
+      when 2 =&gt; Zecimala &lt;= "0010";
+      when 3 =&gt; Zecimala &lt;= "0011";
+      when 4 =&gt; Zecimala &lt;= "0100";
+      when 5 =&gt; Zecimala &lt;= "0101";
+      when 6 =&gt; Zecimala &lt;= "0110";
+      when 7 =&gt; Zecimala &lt;= "0111";
+      when 8 =&gt; Zecimala &lt;= "1000";
+      when 9 =&gt; Zecimala &lt;= "1001";
+      when others =&gt; Zecimala &lt;= "0000";
+    end case;
+  end process;
+end comport;
+</vhdl>
+  <vhdl name="hex_7seg">library ieee;
+use ieee.std_logic_1164.all;
+
+entity hex_7seg is
+  port (
+    hex_in: in std_logic_vector(3 downto 0);
+    a_b_c_d_e_f_g: out std_logic_vector(6 downto 0)
+  );
+end hex_7seg;
+
+architecture arch_hex of hex_7seg is
+begin
+  process(hex_in)
+  begin
+    case hex_in is
+      when "0000" =&gt; a_b_c_d_e_f_g &lt;= "1111110";
+      when "0001" =&gt; a_b_c_d_e_f_g &lt;= "0110000";
+      when "0010" =&gt; a_b_c_d_e_f_g &lt;= "1101101";
+      when "0011" =&gt; a_b_c_d_e_f_g &lt;= "1111001";
+      when "0100" =&gt; a_b_c_d_e_f_g &lt;= "0110011";
+      when "0101" =&gt; a_b_c_d_e_f_g &lt;= "1011011";
+      when "0110" =&gt; a_b_c_d_e_f_g &lt;= "1011111";
+      when "0111" =&gt; a_b_c_d_e_f_g &lt;= "1110000";
+      when "1000" =&gt; a_b_c_d_e_f_g &lt;= "1111111";
+      when "1001" =&gt; a_b_c_d_e_f_g &lt;= "1111011";
+      when "1010" =&gt; a_b_c_d_e_f_g &lt;= "1110111";
+      when "1011" =&gt; a_b_c_d_e_f_g &lt;= "0011111";
+      when "1100" =&gt; a_b_c_d_e_f_g &lt;= "1001110";
+      when "1101" =&gt; a_b_c_d_e_f_g &lt;= "0111101";
+      when "1110" =&gt; a_b_c_d_e_f_g &lt;= "1001111";
+      when "1111" =&gt; a_b_c_d_e_f_g &lt;= "0000001";
+      when others =&gt; a_b_c_d_e_f_g &lt;= "0000000";
+    end case;
+  end process;
+end arch_hex;
+</vhdl>
+</project>

@@ -1,0 +1,41 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity average_2numbers is
+    port (
+        nr1     : in  std_logic_vector(7 downto 0);
+        nr2     : in  std_logic_vector(7 downto 0);
+        average : out std_logic_vector(7 downto 0)
+    );
+end entity average_2numbers;
+
+architecture arch_avg2 of average_2numbers is
+    signal SUM : std_logic_vector(8 downto 0) := (others => '0');
+begin 
+    SUM <= ('0' & nr1) + ('0' & nr2);
+    average <= SUM(8 downto 1);
+end architecture arch_avg2;
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

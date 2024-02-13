@@ -1,0 +1,58 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity lfsr_8bit is
+  port(
+    CLK   : in  std_logic;
+    RESET : in  std_logic;
+    Q     : out std_logic_vector(7 downto 0)
+  );
+end entity lfsr_8bit;
+
+architecture arch_lfsr8 of lfsr_8bit is
+  component xor_gate is
+    port (
+      x : in  std_logic;
+      y : in  std_logic;
+      z : out std_logic
+    );
+  end component xor_gate;
+
+  signal iQ    : std_logic_vector(7 downto 0):="11111111";
+  signal xor1  : std_logic;
+  signal xor2  : std_logic;
+  signal xor3  : std_logic;
+
+begin
+l0: xor_gate port map (iQ(1), iQ(5), xor1);
+l1: xor_gate port map (iQ(6), iQ(7), xor2);
+l3: xor_gate port map (xor1, xor2, xor3);
+    
+    process (CLK, RESET)
+    begin
+        if RESET = '1' then
+            iQ <= "11111111";
+        elsif rising_edge(CLK) then
+            iQ(0) <=xor3;
+            iQ(1) <= iQ(0);
+            iQ(2) <= iQ(1);
+            iQ(3) <= iQ(2);
+            iQ(4) <= iQ(3);
+            iQ(5) <= iQ(4);
+            iQ(6) <= iQ(5);
+            iQ(7) <= iQ(6);
+        end if;
+    end process;
+
+    Q <= iQ;
+
+
+end architecture arch_lfsr8;
+
+
+
+
+
+
+
+

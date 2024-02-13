@@ -1,0 +1,159 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity data_generator_block is
+    port (
+        CONTROL : in  std_logic_vector(1 downto 0);
+        CLK     : in  std_logic;
+        RESET   : in  std_logic;
+        Data    : out std_logic_vector(7 downto 0)
+    );
+end entity data_generator_block;
+
+architecture arch_data of data_generator_block is
+
+    component lfsr_8bit is
+        port (
+            CLK   : in  std_logic;
+            RESET : in  std_logic;
+            Q     : out std_logic_vector(7 downto 0)
+        );
+    end component;
+    
+    component lfsr_4bit is
+        port (
+            CLK   : in  std_logic;
+            Q     : out std_logic_vector(3 downto 0);
+            RESET : in  std_logic
+        );
+    end component;
+   
+    signal iQ4  : std_logic_vector(3 downto 0);
+    signal iQ8  : std_logic_vector(7 downto 0);
+    signal iData: std_logic_vector(7 downto 0) := (others => '0');
+    type rom_array is array (5 downto 0) of std_logic_vector(7 downto 0);
+    constant student1data : rom_array := (
+        "00001001",
+        "00000111",
+        "00000000",
+        "00000010",
+        "00001000",
+        "00000001");
+    constant student2data : rom_array := (
+        "00001000",
+        "00000011",
+        "00000111",
+        "00000110",
+        "00000000",
+        "00000101");
+    
+begin
+
+    C0: lfsr_4bit port map (CLK, iQ4, RESET);
+    C1: lfsr_8bit port map (CLK, RESET, iQ8);
+    
+    
+    process (RESET, iQ4, iQ8, CONTROL,CLK)
+    variable var:integer:=0;
+    variable var2:integer:=0;
+    begin
+        if RESET = '1' then 
+            iData <= (others => '0');
+            var:=0;
+             var2:=0;
+            
+        else
+            case CONTROL is
+               when "10" =>
+                    var2:=0;
+                   if rising_edge(CLK) then
+                       if var< 6 then 
+                       iData <= student1data(var);
+                       var:=var+1;
+                       else 
+                         var:=0;
+                         iData <= student1data(var);
+                         var:=var+1;
+                         end if;
+                         end if;
+                when "11" =>
+                    var:=0;
+                    if rising_edge(CLK) then
+                       if var2< 6 then 
+                       	iData <= student2data(var2);
+                       	var2:=var2+1;
+                       else 
+                         var2:=0;
+                         iData <= student2data(var2);
+                         var2:=var2+1;
+                       end if;
+				end if;
+                when "01" =>
+                	var:=0;
+                	var2:=0;
+                    iData <= "0000" & iQ4;
+                when others =>
+                	var:=0;
+                	var2:=0;
+                    iData <= iQ8;
+            end case;
+        end if;
+    end process;
+
+    Data <= iData;
+    
+end architecture arch_data;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

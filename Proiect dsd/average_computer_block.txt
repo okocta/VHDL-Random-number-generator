@@ -1,0 +1,185 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+USE ieee.std_logic_arith.all;
+use ieee.numeric_std.all;
+
+entity average_computer_block is
+    port (
+        DIN: in std_logic_vector(7 downto 0);
+        CLK: in std_logic;
+        FILTER: in std_logic_vector(1 downto 0);
+        RESET: in std_logic;
+        AVERAGE: out std_logic_vector(7 downto 0)
+    );
+end average_computer_block;
+
+architecture arch_avg of average_computer_block is
+
+    component average_16numbers is
+        port (
+             nr1  : in std_logic_vector(7 downto 0);
+	        nr2  : in std_logic_vector(7 downto 0);
+	        nr3  : in std_logic_vector(7 downto 0);
+	        nr4  : in std_logic_vector(7 downto 0);
+	        nr5  : in std_logic_vector(7 downto 0);
+	        nr6  : in std_logic_vector(7 downto 0);
+	        nr7  : in std_logic_vector(7 downto 0);
+	        nr8  : in std_logic_vector(7 downto 0);
+	        nr9  : in std_logic_vector(7 downto 0);
+	        nr10 : in std_logic_vector(7 downto 0);
+	        nr11 : in std_logic_vector(7 downto 0);
+	        nr12 : in std_logic_vector(7 downto 0);
+	        nr13 : in std_logic_vector(7 downto 0);
+	        nr14 : in std_logic_vector(7 downto 0);
+	        nr15 : in std_logic_vector(7 downto 0);
+	        nr16 : in std_logic_vector(7 downto 0);
+	        avg  : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component average_2numbers is
+        port (
+            nr1: in std_logic_vector(7 downto 0);
+            nr2: in std_logic_vector(7 downto 0);
+            average: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component average_4numbers is
+        port (
+            nr1: in std_logic_vector(7 downto 0);
+            nr2: in std_logic_vector(7 downto 0);
+            nr3: in std_logic_vector(7 downto 0);
+            nr4: in std_logic_vector(7 downto 0);
+            avg: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component register_8bit is
+        port (
+            din: in std_logic_vector(7 downto 0);
+            r: in std_logic;
+            clk: in std_logic;
+            q: out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component average_8numbers is
+        port (
+	       nr1 : in std_logic_vector(7 downto 0);
+	       nr2 : in std_logic_vector(7 downto 0);
+	       nr3 : in std_logic_vector(7 downto 0);
+	       nr4 : in std_logic_vector(7 downto 0);
+	       nr5 : in std_logic_vector(7 downto 0);
+	       nr6 : in std_logic_vector(7 downto 0);
+	       nr7 : in std_logic_vector(7 downto 0);
+	       nr8 : in std_logic_vector(7 downto 0);
+	       avg : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    type NUMBERS_TYPE is array (0 to 15) of std_logic_vector(7 downto 0);
+    signal AVERAGE_LAST2: std_logic_vector(7 downto 0);
+    signal AVERAGE_LAST4: std_logic_vector(7 downto 0);
+    signal AVERAGE_LAST8: std_logic_vector(7 downto 0);
+    signal AVERAGE_LAST16: std_logic_vector(7 downto 0);
+    signal NUM: NUMBERS_TYPE;
+
+begin
+
+    Registers: for I in 0 to 15 generate
+        L1: if I = 0 generate
+            L2: register_8bit port map (DIN, RESET, CLK, NUM(0));
+        end generate;
+
+        L3: if I > 0 generate
+            L3: register_8bit port map (NUM(I - 1), RESET, CLK, NUM(I));
+        end generate;
+    end generate;
+
+    AVG_OF_LAST2: average_2numbers port map (NUM(0), NUM(1), AVERAGE_LAST2);
+    AVG_OF_LAST4: average_4numbers port map (NUM(0), NUM(1), NUM(2), NUM(3), AVERAGE_LAST4);
+    AVG_OF_LAST8: average_8numbers port map (NUM(0), NUM(1), NUM(2), NUM(3), NUM(4), NUM(5), NUM(6), NUM(7), AVERAGE_LAST8);
+    AVG_OF_LAST16: average_16numbers port map (NUM(0), NUM(1), NUM(2), NUM(3), NUM(4), NUM(5), NUM(6), NUM(7),NUM(8), NUM(9), NUM(10), NUM(11), NUM(12), NUM(13), NUM(14), NUM(15), AVERAGE_LAST16);
+
+    process (FILTER, AVERAGE_LAST2, AVERAGE_LAST4, AVERAGE_LAST8, AVERAGE_LAST16)
+        variable AVG: std_logic_vector(7 downto 0) := "00000000";
+    begin
+        case FILTER is
+            when "00" =>
+                AVG := AVERAGE_LAST2;
+            when "01" =>
+                AVG := AVERAGE_LAST4;
+            when "10" =>
+                AVG := AVERAGE_LAST8;
+            when "11" =>
+                AVG := AVERAGE_LAST16;
+            when others =>
+                null;
+        end case;
+
+        AVERAGE <= AVG;
+    end process;
+
+end arch_avg;
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+		
+	
